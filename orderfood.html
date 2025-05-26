@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>food order</title>
+    <link rel="stylesheet" href="orderfood.css">
+</head>
+<body>
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="biriyani.jpeg" alt="Plate of biriyani">
+                <h3>Biriyani</h3>
+                <p>Fragrant basmati rice cooked with tender meat and aromatic spices.</p>
+                <div class="menu-actions">
+                    <div class="quantity-control">
+                        <label for="biriyani-qty">Quantity:</label>
+                        <input type="number" id="biriyani-qty" name="biriyani-qty" value="1" min="1">
+                    </div>
+                    <button class="add-to-cart" data-target="biriyani-qty">Add to Cart</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="shawarma.jpeg" alt="Chicken shawarma wrap">
+                <h3>Shawarma</h3>
+                <p>Thinly sliced marinated meat, grilled and wrapped in warm pita with fresh vegetables and tangy sauces.</p>
+                <div class="menu-actions">
+                    <div class="quantity-control">
+                        <label for="shawarma-qty">Quantity:</label>
+                        <input type="number" id="shawarma-qty" name="shawarma-qty" value="1" min="1">
+                    </div>
+                    <button class="add-to-cart" data-target="shawarma-qty">Add to Cart</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="pizza.jpeg" alt="Pepperoni pizza">
+                <h3>Pizza</h3>
+                <p>A crispy crust topped with savory tomato sauce, melted cheese, and your choice of delicious toppings.</p>
+                <div class="menu-actions">
+                    <div class="quantity-control">
+                        <label for="pizza-qty">Quantity:</label>
+                        <input type="number" id="pizza-qty" name="pizza-qty" value="1" min="1">
+                    </div>
+                    <button class="add-to-cart" data-target="pizza-qty">Add to Cart</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="burger.jpeg" alt="Beef burger with fries">
+                <h3>Burger</h3>
+                <p>A juicy patty grilled to perfection, nestled in a soft bun with your favorite fixings.</p>
+                <div class="menu-actions">
+                    <div class="quantity-control">
+                        <label for="burger-qty">Quantity:</label>
+                        <input type="number" id="burger-qty" name="burger-qty" value="1" min="1">
+                    </div>
+                    <button class="add-to-cart" data-target="burger-qty">Add to Cart</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="grill.jpeg" alt="Grilled chicken breast">
+                <h3>Grilled Chicken</h3>
+                <p>Succulent chicken, seasoned and grilled to a smoky perfection.</p>
+                <div class="menu-actions">
+                    <div class="quantity-control">
+                        <label for="grill-qty">Quantity:</label>
+                        <input type="number" id="grill-qty" name="grill-qty" value="1" min="1">
+                    </div>
+                    <button class="add-to-cart" data-target="grill-qty">Add to Cart</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="chilly.jpeg" alt="Spicy Chicken 65">
+                <h3>Chicken 65</h3>
+                <p>A spicy and flavorful dish featuring tender chicken marinated in a blend of peppers and spices.</p>
+                <div class="menu-actions">
+                    <div class="quantity-control">
+                        <label for="chilly-qty">Quantity:</label>
+                        <input type="number" id="chilly-qty" name="chilly-qty" value="1" min="1">
+                    </div>
+                    <button class="add-to-cart" data-target="chilly-qty">Add to Cart</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="shakes.jpeg" alt="Chocolate milkshake">
+                <h3>Shakes</h3>
+                <p>A smooth and indulgent blend of ice cream, milk, and your favorite flavors.</p>
+                <div class="menu-actions">
+                    <div class="quantity-control">
+                        <label for="shakes-qty">Quantity:</label>
+                        <input type="number" id="shakes-qty" name="shakes-qty" value="1" min="1">
+                    </div>
+                    <button class="add-to-cart" data-target="shakes-qty">Add to Cart</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="ice cream.jpeg" alt="Vanilla ice cream cone">
+                <h3>Ice Cream</h3>
+                <p>A creamy and refreshing frozen dessert, available in a variety of irresistible flavors.</p>
+                <div class="menu-actions">
+                    <div class="quantity-control">
+                        <label for="icecream-qty">Quantity:</label>
+                        <input type="number" id="icecream-qty" name="icecream-qty" value="1" min="1">
+                    </div>
+                    <button class="add-to-cart" data-target="icecream-qty">Add to Cart</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="cakes.jpeg" alt="Chocolate layered cake">
+                <h3>Cakes</h3>
+                <p>Decadent layers of moist cake and creamy frosting, perfect for any celebration.</p>
+                <div class="menu-actions">
+                    <div class="quantity-control">
+                        <label for="cakes-qty">Quantity:</label>
+                        <input type="number" id="cakes-qty" name="cakes-qty" value="1" min="1">
+                    </div>
+                    <button class="add-to-cart" data-target="cakes-qty">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', () => {
+                const inputId = button.getAttribute('data-target');
+                const input = document.getElementById(inputId);
+                let currentQty = parseInt(input.value);
+                if (!isNaN(currentQty)) {
+                    input.value = currentQty + 1;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

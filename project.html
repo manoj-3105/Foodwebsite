@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoooD</title>
+    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <div class="bg-image"></div>
+        <div class="bg-image"></div>
+        <div class="bg-image"></div>
+        <nav class="nav1">
+            <a class="nav2" href="gettheapp" target="_blank">Get the app</a>
+            <a href="#orderfood">orders</a>
+            <a href="#login">Log in</a>
+            <a href="#contact">Contact</a>
+            <a href="#about-us">about</a>
+        </nav>
+        <h1>FoooD</h1>
+        <p>Discover the best food & drinks in Tiruppur</p>
+        <form class="search-form"> 
+            <input type="search" id="search" name="search" placeholder="search">
+            <button type="submit" aria-label="Submit Search"><i class="fas fa-search"></i></button>
+        </form>
+    </header>
+
+    <section id="orderfood"> 
+        <a href="orderfood.html" class="order-link" target="_parent"> 
+            <div class="order-container">
+                <img src="download.jpg" alt="Food Image" class="order-image">
+                <div class="order-text">
+                    <h2>Order Online</h2>
+                    <p>Stay home and order to your doorstep</p>
+                </div>
+            </div>
+        </a>
+    </section>
+
+    <section id="form-section">
+        <div class="form-wrapper">
+            <div class="contact-box">
+                <h2>Contact Us</h2>
+                <form class="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="login-box">
+                <h2>Log In</h2>
+                <form class="login-form">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+
+                    <button type="submit">Log In</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="about-us">
+        <p>"At FoooD, we're more than just a food website. We're a team of food lovers dedicated to connecting you with the flavors you crave. We partner with local restaurants and chefs to bring you a diverse menu of mouthwatering options, all delivered right to your door."
+        "Our story began with a simple love for food. We wanted to create a platform where people could easily discover and enjoy the amazing culinary scene in their city. We're committed to providing a seamless ordering experience and supporting local businesses."
+        "From our kitchen to your table, we strive to deliver not just food, but an experience. We believe in using fresh, high-quality ingredients and creating dishes that bring joy to your day. We're passionate about sharing our love of food with you."</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 FoooD. All rights reserved.</p>
+        <a href="#">navigate to top </a>
+    </footer>
+
+    <script>
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for contacting us!');
+            this.reset();
+        });
+
+        document.querySelector('.login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Logged in successfully (simulation).');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
