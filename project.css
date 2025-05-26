@@ -33,17 +33,17 @@ header .bg-image {
 }
 
 header .bg-image:nth-child(1) {
-    background-image: url("tray-food-including-sandwiches-sandwiches-salads_1313501-82200.jpg");
+    background-image: url("Images/tray-food-including-sandwiches-sandwiches-salads_1313501-82200.jpg");
     animation-delay: 0s;
 }
 
 header .bg-image:nth-child(2) {
-    background-image: url("iStock-1407832840.jpg");
+    background-image: url("Images/iStock-1407832840.jpg");
     animation-delay: 3.33s;
 }
 
 header .bg-image:nth-child(3) {
-    background-image: url("background.jpg");
+    background-image: url("Images/background.jpg");
     animation-delay: 6.66s;
 }
 
